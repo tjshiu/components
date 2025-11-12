@@ -1,0 +1,42 @@
+input[ngComboboxInput] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[ngComboboxInput]:focus {
+  outline: 1px solid #4285F4;
+  border-color: #4285F4;
+}
+
+.cdk-overlay-pane {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+[ngOption][aria-selected='true'] {
+  background:  #E8F0FE;
+}
+
+[ngOption][aria-selected='true']::before {
+  content: '✓';
+}
+
+[ngOption][data-active='true'],
+[ngOption]:hover {
+  background: #eaeaea;
+}
+
+[ngListbox] {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+[ngOption] {
+  cursor: pointer;
+  padding: 8px 12px;
+}
+

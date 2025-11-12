@@ -1,0 +1,24 @@
+<h1>Combobox Select Only</h1>
+
+<div ngCombobox #combobox="ngCombobox" [readonly]="true">
+  <input
+    #inputElement
+    ngComboboxInput
+    placeholder="Select a state..."
+  />
+
+  <ng-template
+      [cdkConnectedOverlay]="{origin: inputElement, usePopover: 'inline', matchWidth: true}"
+      [cdkConnectedOverlayOpen]="combobox.expanded()">
+    <div ngListbox [(value)]="value">
+      @for (state of options; track state) {
+        <div
+          ngOption
+          [label]="state"
+          [value]="state">
+          {{ state }}
+        </div>
+      }
+    </div>
+  </ng-template>
+</div>

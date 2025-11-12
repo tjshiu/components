@@ -212,6 +212,10 @@ export class Menu<V> {
       }
     });
 
+    afterRenderEffect(() => {
+      console.log(this._items().length);
+    });
+
     // TODO(wagnermaciel): This is a redundancy needed for if the user uses display: none to hide
     // submenus. In those cases, the ui pattern is calling focus() before the ui has a chance to
     // update the display property. The result is focus() being called on an element that is not

@@ -1,0 +1,17 @@
+<button
+  #menuTrigger
+  ngMenuTrigger
+  [menu]="optionMenu"
+  aria-label="Open Menu">
+  <span aria-hidden="true" class="material-symbols-outlined">more_vert</span>
+</button>
+
+<div ngMenu #optionMenu="ngMenu">
+  <ng-template
+    [cdkConnectedOverlay]="{origin: menuTrigger, usePopover: 'inline'}"
+    [cdkConnectedOverlayOpen]="optionMenu.isVisible()">
+    <div ngMenuItem value="Option 1">Option 1</div>
+    <div ngMenuItem value="Option 2">Option 2</div>
+    <div ngMenuItem value="Option 3">Option 3</div>
+  </ng-template>
+</div>

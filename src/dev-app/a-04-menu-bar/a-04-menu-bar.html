@@ -1,0 +1,24 @@
+<div ngMenuBar>
+  <div ngMenuItem #fileItem value="File" [submenu]="fileMenu">File</div>
+    <div ngMenu #fileMenu="ngMenu">
+      <ng-template 
+          cdkConnectedOverlay
+          [cdkConnectedOverlayOrigin]="fileItem"
+          [cdkConnectedOverlayOpen]="fileMenu.isVisible()">
+        <div ngMenuItem value="New">New</div>
+        <div ngMenuItem value="Open">Open</div>
+        <div ngMenuItem value="Exit">Exit</div>
+      </ng-template>
+    </div>
+
+  <div ngMenuItem #editItem value="Edit" [submenu]="editMenu">Edit</div>
+  <div ngMenu #editMenu="ngMenu">
+      <ng-template
+      [cdkConnectedOverlay]="{origin: editItem, usePopover: 'inline', matchWidth: true}"
+        [cdkConnectedOverlayOpen]="editMenu.isVisible()">
+      <div ngMenuItem value="Cut">Cut</div>
+      <div ngMenuItem value="Copy">Copy</div>
+      <div ngMenuItem value="Paste">Paste</div>
+    </ng-template>
+  </div>
+</div>

@@ -49,6 +49,47 @@ export const DEV_APP_ROUTES: Routes = [
     loadComponent: () => import('./aria-grid/grid-demo').then(m => m.GridDemo),
   },
   {
+    path: 'a-examples',
+    loadComponent: () => import('./a-examples/a-examples').then(m => m.AExamplesDemo),
+  },
+  {
+    path: 'a-examples2',
+    loadComponent: () => import('./a-examples2/a-examples2').then(m => m.AExamplesDemo2),
+  },
+  {
+    path: 'b-examples',
+    loadComponent: () => import('./b-examples/b-examples').then(m => m.BExamplesDemo),
+  },
+  {
+    path: 'a-04-menu-bar',
+    loadComponent: () => import('./a-04-menu-bar/a-04-menu-bar').then(m => m.A04MenuBarDemo),
+  },
+  {
+    path: 'a-05-menu-trigger',
+    loadComponent: () =>
+      import('./a-05-menu-trigger/a-05-menu-trigger').then(m => m.A05MenuTriggerDemo),
+  },
+  {
+    path: 'a-06-tabs',
+    loadComponent: () => import('./a-06-tabs/a-06-tabs').then(m => m.A06TabsDemo),
+  },
+  {
+    path: 'a-07-toolbar',
+    loadComponent: () => import('./a-07-toolbar/a-07-toolbar').then(m => m.A07ToolbarDemo),
+  },
+  {
+    path: 'a-08-tree-single-select',
+    loadComponent: () =>
+      import('./a-08-tree-single-select/a-08-tree-single-select').then(
+        m => m.A08TreeSingleSelectDemo,
+      ),
+  },
+  {
+    path: 'a-09-tree-navigation',
+    loadComponent: () =>
+      import('./a-09-tree-navigation/a-09-tree-navigation').then(m => m.A09TreeNavigationDemo),
+  },
+  {
     path: 'aria-listbox',
     loadComponent: () => import('./aria-listbox/listbox-demo').then(m => m.ListboxDemo),
   },
@@ -308,5 +349,6 @@ export const DEV_APP_ROUTES: Routes = [
     path: 'examples',
     loadComponent: () => import('./examples-page/examples-page').then(m => m.ExamplesPage),
   },
+
   {path: '**', component: DevApp404},
 ];

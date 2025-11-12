@@ -1,0 +1,25 @@
+
+<h1>Combobox AutoComplete</h1>
+
+<div ngCombobox #combobox="ngCombobox" filterMode="manual">
+    <input
+      #inputElement
+      ngComboboxInput
+      placeholder="Search..."
+      [(value)]="query"
+    />
+  <ng-template
+      [cdkConnectedOverlay]="{origin: inputElement, usePopover: 'inline', matchWidth: true}"
+      [cdkConnectedOverlayOpen]="combobox.expanded()">
+        <div ngListbox>
+          @for (option of options(); track option) {
+            <div
+              ngOption
+              [value]="option"
+              [label]="option">{{option}}
+            </div>
+          }
+        </div>
+    </ng-template>
+</div>
+

@@ -184,6 +184,7 @@ export class MenuPattern<V> {
 
   /** Handles mouseover events for the menu. */
   onMouseOver(event: MouseEvent) {
+    console.log('on mouse over');
     if (!this.isVisible()) {
       return;
     }
@@ -329,6 +330,7 @@ export class MenuPattern<V> {
 
   /** Focuses the first menu item. */
   first() {
+    console.log(this.inputs.items());
     this.inputs.activeItem()?.close();
     this.listBehavior.first();
   }
@@ -643,6 +645,7 @@ export class MenuTriggerPattern<V> {
 
   /** Opens the menu. */
   open(opts?: {first?: boolean; last?: boolean}) {
+    console.log('opening');
     this.expanded.set(true);
 
     if (opts?.first) {

@@ -60,6 +60,15 @@ export class DevAppLayout {
   state = getAppState();
   testMode: Observable<boolean>;
   navItems = [
+    {name: 'A Examples', route: '/a-examples'},
+    {name: 'A Examples2', route: '/a-examples2'},
+    {name: 'B Examples', route: '/b-examples'},
+    {name: 'A Menu Bar', route: '/a-04-menu-bar'},
+    {name: 'A Menu Trigger', route: '/a-05-menu-trigger'},
+    {name: 'A Tabs', route: '/a-06-tabs'},
+    {name: 'A Toolbar', route: '/a-07-toolbar'},
+    {name: 'A Tree Single Select', route: '/a-08-tree-single-select'},
+    {name: 'A Tree Navigation', route: '/a-09-tree-navigation'},
     {name: 'Examples', route: '/examples'},
     {name: 'CDK Dialog', route: '/cdk-dialog'},
     {name: 'Aria Accordion', route: '/aria-accordion'},
